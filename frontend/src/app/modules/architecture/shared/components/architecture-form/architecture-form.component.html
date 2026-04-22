@@ -1,0 +1,105 @@
+<div class="container py-4">
+ 
+   
+    <div *ngIf="isLoading" class="text-center py-5">
+        <div class="spinner-border text-primary"></div>
+        <p class="mt-3 text-muted">Loading project...</p>
+    </div>
+ 
+  
+    <div *ngIf="!isLoading">
+ 
+      
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h4 class="fw-bold mb-1"> Edit Architecture</h4>
+                <p class="text-muted mb-0">Update your project and regenerate blueprint</p>
+            </div>
+            <button class="btn btn-outline-secondary btn-sm rounded-3"
+                    (click)="goBack()">
+                ← Back
+            </button>
+        </div>
+ 
+        
+        <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+        </div>
+ 
+     
+        <div class="card shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+ 
+              
+                <div class="mb-3">
+                    <label class="form-label fw-semibold"> Project Title</label>
+                    <input
+                        type="text"
+                        class="form-control rounded-3"
+                        [(ngModel)]="projectTitle"
+                        placeholder="e.g. Food Delivery App"
+                    />
+                </div>
+ 
+                
+                <div class="mb-3">
+                    <label class="form-label fw-semibold"> Project Description</label>
+                    <textarea
+                        class="form-control rounded-3"
+                        [(ngModel)]="projectDescription"
+                        rows="3"
+                        placeholder="Briefly describe your project..."
+                    ></textarea>
+                </div>
+ 
+                <div class="mb-3">
+                    <label class="form-label fw-semibold"> Architecture Level</label>
+                    <select class="form-select rounded-3" [(ngModel)]="architectureLevel">
+                        <option value="Tier1">Tier 1</option>
+                        <option value="Tier2">Tier 2</option>
+                        <option value="NTier">N-Tier</option>
+                    </select>
+                </div>
+ 
+               
+                <div class="mb-4">
+                    <label class="form-label fw-semibold"> Your Requirements</label>
+                    <textarea
+                        class="form-control rounded-3"
+                        [(ngModel)]="prompt"
+                        rows="4"
+                        placeholder="List your specific requirements..."
+                    ></textarea>
+                </div>
+ 
+               
+                <div class="mb-4 p-3 bg-light rounded-3">
+                    <span class="fw-semibold me-2">Fixed Tech Stack:</span>
+                    <span class="badge bg-primary me-1">Angular</span>
+                    <span class="badge bg-primary me-1">ASP.NET Core</span>
+                    <span class="badge bg-primary">SQL Server</span>
+                </div>
+ 
+               
+                <div class="d-flex gap-2">
+                    <button
+                        class="btn btn-primary flex-grow-1 rounded-3 py-2 fw-semibold"
+                        (click)="onUpdate()"
+                        [disabled]="isSaving">
+                        <span *ngIf="isSaving"
+                              class="spinner-border spinner-border-sm me-2">
+                        </span>
+                        {{ isSaving ? 'Updating & Regenerating...' : ' Update Architecture' }}
+                    </button>
+                    <button
+                        class="btn btn-outline-secondary rounded-3 py-2"
+                        (click)="goBack()"
+                        [disabled]="isSaving">
+                        Cancel
+                    </button>
+                </div>
+ 
+            </div>
+        </div>
+    </div>
+</div>

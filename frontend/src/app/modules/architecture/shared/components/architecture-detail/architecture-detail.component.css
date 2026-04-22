@@ -1,0 +1,9 @@
+.blueprint-text{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin: 0;
+}
