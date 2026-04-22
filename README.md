@@ -1,4 +1,4 @@
-# Archify - AI-Powered Software Architecture Generator
+# Archify - Design, Visualize, Build.
  
 ## About The Project
 Archify is an AI-Powered Software Architecture Generator, which aims to transform a basic project idea into a structured software design blueprint. The system will generate recommended architecture, database schema, API endpoints, authentication strategy, folder structure, and deployment considerations based on user input. This application generates the architecture blueprints based on a fixed texh stack - **Angular + ASP.NET Core + SQL Server** ensuring consistency in the generated blueprint.
