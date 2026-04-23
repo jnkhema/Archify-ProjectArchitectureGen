@@ -1,7 +1,7 @@
 # Archify - Design, Visualize, Build.
  
 ## About The Project
-Archify is an AI-Powered Software Architecture Generator, which aims to transform a basic project idea into a structured software design blueprint. The system will generate recommended architecture, database schema, API endpoints, authentication strategy, folder structure, and deployment considerations based on user input. This application generates the architecture blueprints based on a fixed texh stack - **Angular + ASP.NET Core + SQL Server** ensuring consistency in the generated blueprint.
+Archify is an AI-Powered Software Architecture Generator, which will transform a basic project idea into a structured software design blueprint. The system will generate recommended architecture, database schema, API endpoints, authentication strategy, folder structure. This application generates the architecture blueprints based on a fixed texh stack - **Angular + ASP.NET Core + SQL Server** ensuring consistency in the generated blueprint.
  
 ## Tech Stack
 - **Frontend:** Angular 19
@@ -16,26 +16,6 @@ Archify is an AI-Powered Software Architecture Generator, which aims to transfor
 - View, Edit and Delete saved projects
 - Sidebar dashboard showing all past projects
 - Secure API with userId header authentication
- 
-## Project Structure
-```
-Archify/
-  backend/    # ASP.NET Core Web API
-  frontend/   # Angular Application
-## Getting Started
-```
- 
-### Backend Setup
-1. Clone the repository
-2. Copy `appsettings.example.json` to `appsettings.json`
-3. Fill in your connection string and Groq API key
-4. Run migrations: `Update-Database`
-5. Run the project
- 
-### Frontend Setup
-1. Navigate to frontend folder
-2. Run `npm install`
-3. Run `ng serve`
  
 ## API Endpoints
 - `POST /api/Auth/register` - Register new user
