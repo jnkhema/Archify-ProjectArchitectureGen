@@ -19,13 +19,4 @@ export class AuthService {
     register(data: RegisterRequest){
         return this.http.post(`${this.baseUrl}/register`, data, {responseType: 'text'});
     }
-
-
-    // login(data:any){
-    //     return this.http.post<{message: string, user: UserResponse}>(`${environment.apiUrl}/Auth/login`, data);
-    // }
-
-    // register(request: RegisterRequest): Observable<UserResponse> {
-    //     return this.http.post<UserResponse>(`${environment.apiUrl}/auth/register`, request);
-    // }
 }
