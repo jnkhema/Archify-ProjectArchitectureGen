@@ -24,7 +24,6 @@ isLoading: boolean = false;
 
 constructor(private router: Router, private authService: AuthService) {}
 onRegister() {
-  // Simulate registration logic
   if(!this.name || !this.email || !this.password) {
     this.errorMessage = 'Please fill in all fields.';
     return;
